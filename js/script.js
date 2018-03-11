@@ -376,11 +376,13 @@ function openIssueDetails(event){
 	issueModal.querySelector('#issueAssignee').value = getUserNameByUserId(openedIssue.assignee);//todo modify to take username based in user id
 	issueModal.querySelector('#issueUpdatedAt').value = openedIssue.updatedAt;
 	issueModal.querySelector('#issueCreatedAt').value = openedIssue.createdAt;
-	issueModal.querySelector('#issueSprintName').value = getSprintById(openedIssue.sprint);
+
+	
 
 	if(openedIssue.type === 'Task'){
 		document.getElementById('addSubtask').disabled =true;
 	} else {
+		issueModal.querySelector('#issueSprintName').value = getSprintById(openedIssue.sprint);
 		document.getElementById('addSubtask').disabled =false;
 		var addSubtaskBtn = document.getElementById('addSubtask');
 		addSubtaskBtn.issueModal = issueModal;
@@ -514,6 +516,7 @@ function saveComment(event){
 
 	comments.push(comment);
 	parrentIssueComments.push(commentId);
+	commentModal.style.display = 'none';
 }
 
 function getIssueById(issueId){
