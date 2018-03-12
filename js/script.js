@@ -117,7 +117,11 @@ function displaySprints(){
 			divClone.setAttribute('id', sprint.name + sprint.id);
 			var link = divClone.getElementsByTagName('a')[0];
 			link.innerHTML = sprint.name;
-			link.href = '#sprintId' + sprint.id;
+			link.href = '#sprintId' + sprint.id;	
+			divClone.style.marginTop= '50px';
+			divClone.style.display = 'flex';
+			divClone.style.width = '500px';
+			divClone.style.justifyContent = 'space-between';
 
 
 
@@ -132,15 +136,14 @@ function displaySprints(){
 
 			var addButton = document.createElement('button');
 			addButton.setAttribute('class', 'btn btn-secondary');
-			addButton.style.display = 'flex;'
-			addButton.innerHTML = '<span class="glyphicon glyphicon-plus"></span>';
+			addButton.style.display = 'flex';
+			addButton.style.borderRadius = '50px';
+			addButton.innerHTML = '<span class=" btn-circle btn-sm glyphicon glyphicon-plus"></span>';
 			addButton.addEventListener('click', function(){
 				addIssue(sprint.id);
 			});
 
-			divClone.appendChild(addButton);
-			divClone.style.display = 'flex';
-			
+			divClone.appendChild(addButton);	
 			sprintsDiv.appendChild(divClone);
 			sprintsDiv.appendChild(divSprintIssuesClone);
 			

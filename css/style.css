@@ -61,6 +61,7 @@ article{
     top: 60px;
     position: fixed;
     padding: 20px;
+    padding-top: 60px;
     width: 20%;
 }
 
@@ -145,6 +146,7 @@ article{
    float: right;
 }
 
+
 .modal-header .closeBtn {
     padding: 0;
     margin-right: -16rem;
@@ -204,12 +206,24 @@ article{
 .panel-group{
     background-color: #e7dced important!;
     margin-bottom: 20px;
+    float: left;
+}
 
+#panelContainer{
+    float: left;
+    padding: 10px;
 }
 .panel{
    background-color: #e7dced; 
 }
 
+/* .panel-heading{
+    border: 2px solid black;
+} */
+
+#sprintPanel{
+    background-color: #e7dced;
+}
 select{
    min-height: 20px;
 }
