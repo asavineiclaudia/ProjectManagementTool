@@ -43,11 +43,11 @@
 			  <!-- Modal content -->
 			  <div class="modal-content">
 			    <div class="modal-header">
-			      <span class="close">&times;</span>
+			      <span class="close closeBtn">&times;</span>
 			      <h2>Create sprint</h2>
 			    </div>
 			    <div class="modal-body">
-			      Sprint name <input type="text" id="sprintName" name="sprintName">
+			      <strong>Sprint name</strong> <input type="text" id="sprintName" name="sprintName">
 			    </div>
 			    <div class="modal-footer">
 	  				<button type="button" id="createSprint" class="btn btn-light">Create</button>
@@ -80,66 +80,67 @@
 			  <!-- Modal content -->
 			  <div class="modal-content">
 			    <div class="modal-header">
-			      <span class="closeIssue">&times;</span>
+			      <span class="closeIssue closeBtn">&times;</span>
 			      <h2>Issue details</h2>
 			    </div>
 			    <div class="modal-body-issue">
-			     	Name <input type="text" id="issueName" name="issueName">
-			     	<input type="hidden" id="issueId" name="issueId">
-			     	Type <select id="issueType">
-        						<option>Feature</option>
-        						<option>Bug</option>
-        						<option>Task</option>
-								 </select>
-						Sprint <input type="text" id="issueSprintName" name="issueSprintName">
-			     	Created By <input type="text" id="issueCreatedBy" name="issueCreatedBy">
-			     	Assignee <input type="text" id="issueAssignee" name="issueAssignee">
-			     	Description <input type="text" id="issueDescription" name="issueDescription">
-			     	Status <select id="issueStatus">
-        						<option>New</option>
-        						<option>In progress</option>
-        						<option>Feedback</option>
-        						<option>Rework</option>
-        						<option>Resolved</option>
-        						<option>Ready for Testing</option>
-      					 </select>	     	
-			     	Tasks<div class="panel-group" id="issueTasks">
-							    <div class="panel panel-default" id="subtaskPanel">
+							<strong>Name</strong>	<input type="text" id="issueName" name="issueName">
+							<input type="hidden" id="issueId" name="issueId">
+							<strong>Type</strong>  <select id="issueType">
+																						<option>Feature</option>
+																						<option>Bug</option>
+																						<option>Task</option>
+																			</select>
+							<strong>Sprint</strong>	 				<input type="text" id="issueSprintName" name="issueSprintName">
+							<strong>Created By </strong>  	<input type="text" id="issueCreatedBy" name="issueCreatedBy">
+							<strong>Assignee</strong> 			<input type="text" id="issueAssignee" name="issueAssignee">
+			     		<strong>Description</strong>    <input type="text" id="issueDescription" name="issueDescription">
+			  			<strong>Status</strong> <select id="issueStatus">
+																						<option>New</option>
+																						<option>In progress</option>
+																						<option>Feedback</option>
+																						<option>Rework</option>
+																						<option>Resolved</option>
+																						<option>Ready for Testing</option>
+      					 											</select>	     	
+			     	  <strong>Tasks</strong>  <div class="panel-group" id="issueTasks">
+																						<div class="panel panel-default" id="subtaskPanel">
 
-							      <div class="panel-heading" id="issueSubtaskToggle">
-							        <h4 class="panel-title">
-							          <a data-toggle="collapse" href="#subtaskId">See all tasks</a>
-							        </h4>
-							      </div>
+																							<div class="panel-heading" id="issueSubtaskToggle">
+																								<h4 class="panel-title">
+																									<a data-toggle="collapse" href="#subtaskId">See all tasks</a>
+																								</h4>
+																							</div>
 
-							      <div id="subtaskId" class="panel-collapse collapse">
-							        <ul class="list-group">
-							        </ul>
-							      </div>
+																							<div id="subtaskId" class="panel-collapse collapse">
+																								<ul class="list-group">
+																								</ul>
+																							</div>
 
-							 	</div>
-						 </div>
+																					</div>
+																			</div>
 
-						Comments<div class="panel-group" id="issueComments">
-												<div class="panel panel-default" id="issueCommentsPanel">
+							<strong>Comments</strong> <div class="panel-group" id="issueComments">
+																						<div class="panel panel-default" id="issueCommentsPanel">
 
-													<div class="panel-heading" id="issueCommentToggle">
-														<h4 class="panel-title">
-															<a data-toggle="collapse" href="#commentId">See all comments</a>
-														</h4>
-													</div>
-												
-													<div id="commentId" class="panel-collapse collapse">
-														<ul class="list-group">
-														</ul>
-													</div>
-											
-											</div>
-										</div>
+																							<div class="panel-heading" id="issueCommentToggle">
+																								<h4 class="panel-title">
+																									<a data-toggle="collapse" href="#commentId">See all comments</a>
+																								</h4>
+																							</div>
+																						
+																							<div id="commentId" class="panel-collapse collapse">
+																								<ul class="list-group">
+																								</ul>
+																							</div>
+																					
+																					</div>
+																				</div>
 
-			     	Updated At <input type="text" id="issueUpdatedAt" name="issueUpdatedAt">
-			     	Created At <input type="text" id="issueCreatedAt" name="issueCreatedAt">
-			    </div>
+			     		<strong>Updated At</strong>    <input type="text" id="issueUpdatedAt" name="issueUpdatedAt">
+			     		<strong>Created At</strong>		 <input type="text" id="issueCreatedAt" name="issueCreatedAt">
+					</div>
+					
 			    <div class="modal-footer">
 	  				<button type="button" id="saveModalIssue" class="btn btn-light">Save</button>
 	  				<button type="button" id="addSubtask" class="btn btn-light">Add Subtask</button>
@@ -154,47 +155,46 @@
 			  <!-- Modal content -->
 			  <div class="modal-content">
 			    <div class="modal-header">
-			      <span class="closeSubtask">&times;</span>
+			      <span class="closeSubtask closeBtn">&times;</span>
 			      <h2>Task details</h2>
 			    </div>
 			    <div class="modal-body-issue">
-			     	Name <input type="text" id="issueName" name="issueName">
+						<strong>Name</strong> <input type="text" id="issueName" name="issueName">
 			     	<input type="hidden" id="issueId" name="issueId">
-			     	Type <select id="issueType">
-        						<option>Feature</option>
-        						<option>Bug</option>
-        						<option>Task</option>
-								 </select>
-			     	Created By <input type="text" id="issueCreatedBy" name="issueCreatedBy">
-			     	Assignee <input type="text" id="issueAssignee" name="issueAssignee">
-			     	Description <input type="text" id="issueDescription" name="issueDescription">
-			     	Status <select id="issueStatus">
-        						<option>New</option>
-        						<option>In progress</option>
-        						<option>Feedback</option>
-        						<option>Rework</option>
-        						<option>Resolved</option>
-        						<option>Ready for Testing</option>
-								 </select>	 
-								     	
-						Comments<div class="panel-group" id="subtaskComments">
-											<div class="panel panel-default" id="subtaskPanelComments">
+			     	<strong>Type</strong> <select id="issueType">
+																			<option>Feature</option>
+																			<option>Bug</option>
+																			<option>Task</option>
+								 									</select>
+			     	<strong>Created By</strong>   <input type="text" id="issueCreatedBy" name="issueCreatedBy">
+			     	<strong>Assignee</strong>     <input type="text" id="issueAssignee" name="issueAssignee">
+			     	<strong>Description</strong>  <input type="text" id="issueDescription" name="issueDescription">
+			     	<strong>Status</strong>       <select id="issueStatus">
+																								<option>New</option>
+																								<option>In progress</option>
+																								<option>Feedback</option>
+																								<option>Rework</option>
+																								<option>Resolved</option>
+																								<option>Ready for Testing</option>
+								 													</select>	 
+						<strong>Comments</strong>  		<div class="panel-group" id="subtaskComments">
+																								<div class="panel panel-default" id="subtaskPanelComments">
 
-												<div class="panel-heading" id="subtaskCommentToggle">
-													<h4 class="panel-title">
-														<a data-toggle="collapse" href="#subtaskCommentId">See all comments</a>
-													</h4>
-												</div>
-												
-												<div id="subtaskCommentId" class="panel-collapse collapse">
-													<ul class="list-group">
-													</ul>
-												</div>
-												
-											</div>
-										</div>
-			     	Updated At <input type="text" id="issueUpdatedAt" name="issueUpdatedAt">
-			     	Created At <input type="text" id="issueCreatedAt" name="issueCreatedAt">
+																									<div class="panel-heading" id="subtaskCommentToggle">
+																										<h4 class="panel-title">
+																											<a data-toggle="collapse" href="#subtaskCommentId">See all comments</a>
+																										</h4>
+																									</div>
+																									
+																									<div id="subtaskCommentId" class="panel-collapse collapse">
+																										<ul class="list-group">
+																										</ul>
+																									</div>
+																									
+																								</div>
+																							</div>
+			     	<strong>Updated At</strong>    <input type="text" id="issueUpdatedAt" name="issueUpdatedAt">
+			     	<strong>Created At</strong>    <input type="text" id="issueCreatedAt" name="issueCreatedAt">
 			    </div>
 			    <div class="modal-footer">
 						<button type="button" id="saveEditModalSubtask" class="btn btn-light">Save</button>
@@ -209,26 +209,26 @@
 			  <!-- Modal content -->
 			  <div class="modal-content">
 			    <div class="modal-header">
-			      <span class="closeIssueSave">&times;</span>
+			      <span class="closeIssueSave closeBtn">&times;</span>
 			      <h2>Creating Issue</h2>
 			    </div>
 			    <div class="modal-body-issue">
-			     	Name <input type="text" id="issueName" name="issueName">
+						<strong>Name</strong>  <input type="text" id="issueName" name="issueName">
 			     	<input type="hidden" id="issueId" name="issueId">
-			     	Type <select id="issueType">
-	    						<option>Feature</option>
-	    						<option>Bug</option>
-	    						<option>Task</option>
-							 </select>
-			     	Description <input type="text" id="issueDescription" name="issueDescription">
-			     	Status <select id="issueStatus">
-	    						<option>New</option>
-	    						<option>In progress</option>
-	    						<option>Feedback</option>
-	    						<option>Rework</option>
-	    						<option>Resolved</option>
-	    						<option>Ready for Testing</option>
-	  					 </select>	     	
+			     	<strong>Type</strong>    <select id="issueType">
+																					<option>Feature</option>
+																					<option>Bug</option>
+																					<option>Task</option>
+															 				</select>
+						<strong>Description</strong>  <input type="text" id="issueDescription" name="issueDescription">
+						<strong>Status</strong>   <select id="issueStatus">
+																					<option>New</option>
+																					<option>In progress</option>
+																					<option>Feedback</option>
+																					<option>Rework</option>
+																					<option>Resolved</option>
+																					<option>Ready for Testing</option>
+	  					 												</select>	     	
 			    </div>
 			    <div class="modal-footer">
 	  				<button type="button" id="saveModalIssueCreateEdit" class="btn btn-light">Save</button>
@@ -241,19 +241,19 @@
 			  <!-- Modal content -->
 			  <div class="modal-content">
 			    <div class="modal-header">
-			      <span class="closeIssueSave">&times;</span>
+			      <span class="closeIssueSave closeBtn">&times;</span>
 			      <h2>Creating Subtask</h2>
 			    </div>
 			    <div class="modal-body-issue">
-			     	Name <input type="text" id="issueName" name="issueName">
+						<strong>Name</strong> <input type="text" id="issueName" name="issueName">
 			     	<input type="hidden" id="issueId" name="issueId">
-			     	Type <select id="issueType">
-	    						<option>Task</option>
-	  					 </select>
-			     	Description <input type="text" id="issueDescription" name="issueDescription">
-			     	Status <select id="issueStatus">
-	    						<option>New</option>
-	  					 </select>	     	
+			     	<strong>Type</strong>    <select id="issueType">
+	    																		<option>Task</option>
+	  					 											 </select>
+			     	<strong>Description</strong>    <input type="text" id="issueDescription" name="issueDescription">
+			     	<strong>Status</strong>     <select id="issueStatus">
+	    																			<option>New</option>
+	  					 													</select>	     	
 			    </div>
 			    <div class="modal-footer">
 						<button type="button" id="saveModalSubtask" class="btn btn-light">Save</button>
@@ -287,11 +287,11 @@
 			  <!-- Modal content -->
 			  <div class="modal-content">
 			    <div class="modal-header">
-			      <span class="closeComment">&times;</span>
+			      <span class="closeComment closeBtn">&times;</span>
 			      <h2>Add comment</h2>
 			    </div>
 			    <div class="modal-body">
-			      Text <input type="text" id="commentText" name="comment">
+			     <strong>Text</strong>  <input type="text" id="commentText" name="comment">
 			    </div>
 			    <div class="modal-footer">
 	  				<button type="button" id="createComment" class="btn btn-light">Add</button>
